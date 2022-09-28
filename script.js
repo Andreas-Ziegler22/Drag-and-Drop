@@ -16,17 +16,18 @@ function dragStart() {
   setTimeout(() => (this.className = "ivisible"), 0);
 }
 function dragEnd() {
-  console.log("drag end");
+  this.className = "fill";
 }
-function dragOver() {
-  console.log("drag Over");
+function dragOver(e) {
+  e.preventDefault();
 }
-function dragEnter() {
-  console.log("drag enter");
+function dragEnter(e) {
+  e.preventDefault();
 }
-function dragLeave() {
-  console.log("drag leave");
+function dragLeave(e) {
+  e.preventDefault();
 }
 function dragDrop() {
-  console.log("drop");
+  this.className = "empty";
+  this.append(fill);
 }
