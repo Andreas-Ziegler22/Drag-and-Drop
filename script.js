@@ -12,7 +12,8 @@ for (empty of empties) {
 }
 
 function dragStart() {
-  console.log("drag start");
+  this.className += " hold";
+  setTimeout(() => (this.className = "ivisible"), 0);
 }
 function dragEnd() {
   console.log("drag end");
